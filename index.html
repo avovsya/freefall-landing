@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>freefall studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Space Mono', monospace;
+        background-color: #111;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+      }
+      .scanlines-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: repeating-linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.3) 0px,
+          rgba(0, 0, 0, 0.25) 1px,
+          rgba(0, 0, 0, 0.15) 1.6px,
+          transparent 2.4px
+        );
+        background-size: 100% 2.4px;
+        pointer-events: none;
+        z-index: 9999;
+        filter: blur(0.15px) contrast(1.05);
+      }
+    </style>
+  </head>
+  <body class="flex flex-col items-center justify-center min-h-screen text-center px-4">
+    <div class="scanlines-overlay"></div>
+
+    <div class="flex flex-col items-center relative z-10">
+      <div class="flex items-start space-x-6 mb-8">
+        <img src="photo_2025-05-06_18-29-29.jpg" alt="freefall studio logo" class="w-20 md:w-24" />
+        <div class="text-left">
+          <h1 class="text-5xl md:text-6xl font-bold lowercase leading-tight">freefall</h1>
+          <h1 class="text-5xl md:text-6xl font-bold lowercase leading-tight">studio</h1>
+        </div>
+      </div>
+
+      <!-- <p class="text-base md:text-lg italic">we build fast and drop what doesn’t fly</p> -->
+    </div>
+
+    <footer class="mt-12 text-sm text-gray-400 relative z-10">
+      <p>github / email / made with love</p>
+    </footer>
+  </body>
+</html>
+
